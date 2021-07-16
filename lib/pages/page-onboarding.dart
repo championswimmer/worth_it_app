@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:worth_it_app/pages/page-dashboard.dart';
-import 'package:worth_it_app/widgets/appbar.dart';
+import 'package:worth_it_app/widgets/atomic/worthit-wordmark.dart';
 
 class OnboardingPage extends StatelessWidget {
   @override
@@ -28,7 +28,7 @@ class OnboardingPage extends StatelessWidget {
       children: [
         Positioned(
           top: 100,
-          child: MainAppBar.createWordMark(44),
+          child: WorthItWordmark(44),
         ),
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,

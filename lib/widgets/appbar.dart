@@ -2,24 +2,14 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:worth_it_app/widgets/atomic/worthit-wordmark.dart';
 
 class MainAppBar extends AppBar {
-  static Widget createWordMark(double? fontSize) => Row(
-    children: [
-      Text('worth ', style: _getHeaderFontStyle(Colors.blueGrey, fontSize: fontSize)),
-      Text('it?', style: _getHeaderFontStyle(Colors.green, fontSize: fontSize)),
-    ],
-  );
-
-  static TextStyle _getHeaderFontStyle(Color color, {double? fontSize}) {
-    return GoogleFonts.workSans(
-        color: color, fontWeight: FontWeight.w600, fontSize: fontSize);
-  }
 
   MainAppBar()
       : super(
             centerTitle: false,
-            title: createWordMark(24),
+            title: WorthItWordmark(24),
             backgroundColor: Colors.transparent,
             elevation: 0.0,
             actions: [
