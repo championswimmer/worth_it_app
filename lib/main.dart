@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:worth_it_app/app-router.dart';
-import 'package:worth_it_app/pages/page-onboarding.dart';
+import 'package:worth_it_app/pages/page-home.dart';
 
 import 'app-theme.dart';
 
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: WorthItTheme.getMainAppTheme(),
-      initialRoute: '/onboarding',
+      initialRoute: AppRoutes.ONBOARDING,
       routes: createRouter(context),
       debugShowCheckedModeBanner: false,
     );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:worth_it_app/pages/page-dashboard.dart';
+import 'package:worth_it_app/app-router.dart';
 import 'package:worth_it_app/widgets/atomic/worthit-wordmark.dart';
 
 class OnboardingPage extends StatelessWidget {
@@ -12,8 +12,7 @@ class OnboardingPage extends StatelessWidget {
     );
     final button = ElevatedButton(
       onPressed: () {
-        Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => DashboardPage()));
+        Navigator.of(context).pushReplacementNamed(AppRoutes.HOME);
       },
       child: Padding(
         padding: const EdgeInsets.fromLTRB(30, 10, 30, 10),
@@ -22,26 +21,28 @@ class OnboardingPage extends StatelessWidget {
     );
 
     return Scaffold(
-        body: Stack(
-      alignment: Alignment.topCenter,
-      fit: StackFit.expand,
-      children: [
-        Positioned(
-          top: 100,
-          child: WorthItWordmark(44),
-        ),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            background,
-          ],
-        ),
-        Positioned(
-          child: button,
-          bottom: 30,
-        )
-      ],
-    ));
+      body: SafeArea(
+          child: Stack(
+        alignment: Alignment.topCenter,
+        fit: StackFit.expand,
+        children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              background,
+            ],
+          ),
+          Positioned(
+            top: 100,
+            child: WorthItWordmark(44),
+          ),
+          Positioned(
+            child: button,
+            bottom: 30,
+          )
+        ],
+      )),
+    );
   }
 }
