@@ -2,9 +2,9 @@ import 'dart:developer';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:worth_it_app/pages/page-home-dashboard.dart';
-import 'package:worth_it_app/pages/page-home-settings.dart';
-import 'package:worth_it_app/pages/page-home-wishlist.dart';
+import 'package:worth_it_app/pages/page_home_dashboard.dart';
+import 'package:worth_it_app/pages/page_home_settings.dart';
+import 'package:worth_it_app/pages/page_home_wishlist.dart';
 import 'package:worth_it_app/widgets/appbar.dart';
 import 'package:worth_it_app/widgets/base/home-route.dart';
 

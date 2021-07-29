@@ -17,7 +17,7 @@ class WorthItTheme {
     highlightColor: Colors.transparent,
     splashColor: Colors.transparent,
     hoverColor: Colors.transparent,
-    textTheme: GoogleFonts.workSansTextTheme()
+    textTheme: GoogleFonts.workSansTextTheme(),
   );
 
   static ThemeData getMainAppTheme() => _mainAppTheme;

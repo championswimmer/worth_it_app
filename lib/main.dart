@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:worth_it_app/app-router.dart';
-import 'package:worth_it_app/pages/page-home.dart';
+import 'package:worth_it_app/pages/page_home.dart';
 
 import 'app-theme.dart';
 

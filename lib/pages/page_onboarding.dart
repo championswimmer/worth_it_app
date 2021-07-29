@@ -12,11 +12,11 @@ class OnboardingPage extends StatelessWidget {
     );
     final button = ElevatedButton(
       onPressed: () {
-        Navigator.of(context).pushReplacementNamed(AppRoutes.HOME);
+        Navigator.of(context).pushReplacementNamed(AppRoutes.ONBOARDING_FORM);
       },
       child: Padding(
         padding: const EdgeInsets.fromLTRB(30, 10, 30, 10),
-        child: Text('Go To Dashboard'),
+        child: Text('Get Started'),
       ),
     );
 
