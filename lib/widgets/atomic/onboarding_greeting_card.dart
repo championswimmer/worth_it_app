@@ -2,11 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class OnboardingGreetingCard extends StatelessWidget {
-  String _user = "";
+  final String user;
 
-  OnboardingGreetingCard({String? user}) {
-    if (user != null) this._user = user;
-  }
+  OnboardingGreetingCard({required this.user});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +25,7 @@ class OnboardingGreetingCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Hello $_user !",
+                  Text("Hello $user !",
                       style: GoogleFonts.workSans(
                         fontWeight: FontWeight.w300,
                       )),
