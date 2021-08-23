@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-@immutable
 abstract class SavingsDataState {
   abstract int monthlyEarning;
   abstract int daysPerWeek;
@@ -14,6 +13,7 @@ class SavingsDataInitialState extends SavingsDataState {
   int daysPerWeek = 5;
   int hoursPerDay = 8;
   int savingsRate = 50;
+
 }
 
 enum SavingsDataEventType {
@@ -25,8 +25,8 @@ enum SavingsDataEventType {
 
 @immutable
 class SavingsDataEvent {
-  late int value;
-  late SavingsDataEventType type;
+  final int value;
+  late final SavingsDataEventType type;
 
   SavingsDataEvent.saveMonthlyEarning(this.value) {
     type = SavingsDataEventType.monthlyEarning;
